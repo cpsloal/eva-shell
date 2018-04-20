@@ -1,28 +1,37 @@
 <template>
   <div id="wrapper">
-    <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">
-        <span class="title">
-          Welcome to your new project!
-        </span>
-        <system-information></system-information>
+        <img id="logo" src="~@/assets/eva.logo.256x256.png" alt="eva-shell">
       </div>
 
       <div class="right-side">
+        <div class="title">
+          Welcome to your new Eva-shell project!
+        </div>
         <div class="doc">
-          <div class="title">Getting Started</div>
           <p>
-            electron-vue comes packed with detailed documentation that covers everything from
-            internal configurations, using the project structure, building your application,
-            and so much more.
+            <a @click="open('https://github.com/cpsloal/eva-shell')">Eva-shell</a> comes packed with details on the changes made from <a @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">electron-vue</a>
+            to become this application shell that you can use to build your application.
           </p>
-          <button @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">Read the Docs</button><br><br>
+          <button @click="open('https://github.com/cpsloal/eva-shell')">Read the Eva-shell Docs</button><br><br>
         </div>
         <div class="doc">
           <div class="title alt">Other Documentation</div>
-          <button class="alt" @click="open('https://electron.atom.io/docs/')">Electron</button>
-          <button class="alt" @click="open('https://vuejs.org/v2/guide/')">Vue.js</button>
+          <ul>
+            <li>
+              <a class="alt" @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">Electron-Vue</a>    
+            </li>
+            <li>
+              <a class="alt" @click="open('https://electron.atom.io/docs/')">Electron</a>
+            </li>
+            <li>
+              <a class="alt" @click="open('https://vuejs.org/v2/guide/')">Vue.js</a>
+            </li>
+            <li>
+              <a class="alt" @click="open('https://bulma.io/')">Bulma.io</a>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
@@ -30,11 +39,8 @@
 </template>
 
 <script>
-  import SystemInformation from './LandingPage/SystemInformation'
-
   export default {
     name: 'landing-page',
-    components: { SystemInformation },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
@@ -44,7 +50,7 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
   * {
     box-sizing: border-box;
@@ -69,7 +75,7 @@
   #logo {
     height: auto;
     margin-bottom: 20px;
-    width: 420px;
+    width: 256px;
   }
 
   main {
@@ -121,8 +127,12 @@
     border: 1px solid #4fc08d;
   }
 
-  .doc button.alt {
+  .doc a.alt {
     color: #42b983;
     background-color: transparent;
+  }
+
+  .doc ul {
+    list-style: none;
   }
 </style>
