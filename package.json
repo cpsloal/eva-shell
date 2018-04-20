@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "",
   "description": "Electron Vue App (Eva) Shell. A \"Hello World\" of using VueJS & ElectronJS to build a cross-platform application shell.",
-  "license": null,
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -23,7 +23,7 @@
   },
   "build": {
     "productName": "eva-shell",
-    "appId": "org.simulatedgreg.electron-vue",
+    "appId": "com.github.cpsloal.eva-shell",
     "directories": {
       "output": "build"
     },
@@ -34,13 +34,13 @@
       "contents": [
         {
           "x": 410,
-          "y": 150,
+          "y": 215,
           "type": "link",
           "path": "/Applications"
         },
         {
           "x": 130,
-          "y": 150,
+          "y": 215,
           "type": "file"
         }
       ]
@@ -56,8 +56,9 @@
     }
   },
   "dependencies": {
-    "vue": "^2.3.3",
     "axios": "^0.16.1",
+    "bulma": "^0.7.1",
+    "vue": "^2.3.3",
     "vue-electron": "^1.0.6",
     "vue-router": "^2.5.3",
     "vuex": "^2.3.1"
