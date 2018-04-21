@@ -1,6 +1,6 @@
 {
   "name": "eva-shell",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "",
   "description": "Electron Vue App (Eva) Shell. A \"Hello World\" of using VueJS & ElectronJS to build a cross-platform application shell.",
   "license": "MIT",
