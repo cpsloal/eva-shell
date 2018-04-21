@@ -138,4 +138,4 @@ TA-DA! Now we have (something that doesn't look much different) ...
 
 ![Application Layout with only AppMain](doc/images/3-AppMain-with-Bulma.png "What we want the app layout to be like ...")
 
-By now, we have removed more boilerplate code.
+By now, we have removed more boilerplate code. __[Here is a working copy so far ...](https://github.com/cpsloal/eva-shell/releases/tag/v0.0.1-Vanila-AppMain)__
